@@ -12,12 +12,13 @@
         integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/media.css">
 </head>
 <body>
 
     <header class="header">
 
-        <div class="container header-flex">
+        <div class="container container-header-flex">
             <nav class="header-nav">
             <a  class="header-logo link header-link" href="./index.html">Web<span class="span-logo">Studio</span></a>
             <ul class="header-menu-list list header-flex">
@@ -34,7 +35,7 @@
             </ul>
             </nav>
             <address class="header-address">
-            <ul class="list header-menu-list header-flex header-address-list">
+            <ul class="list header-address-list">
                 <li class="header-addrress-item">
                     <a class="header-address link header-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
                 </li>
@@ -43,6 +44,74 @@
                 </li>
             </ul>
             </address>
+            <button type="button" class="open-menu-btn js-open-menu" aria-expanded="">
+                <svg class="open-bt-icon" width="32" height="22">
+                    <use href="./images/icons.svg#icon-charm_menu-hamburger"></use>
+                </svg>
+            </button>
+        </div>
+
+        <div class="mob-menu js-menu-container is-open">
+            <button type="button" class="close-button js-close-menu">
+                <svg class="close-button-icon" width="8" height="8">
+                    <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+                </svg>
+            </button>
+            <nav class="header-mob-nav">
+                <ul class="mob-menu-list list">
+                    <li class="mob-menu-item">
+                        <a class="link mob-list mob-link" href="./index.html">Studio</a>
+                    </li>
+                    <li class="mob-menu-item">
+                        <a class="mob-list link mob-link" href="./portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="mob-menu-item">
+                        <a class="mob-list link mob-link" href="">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mob-box">
+                <address class="header-mob-address">
+                    <ul class="list mob-menu-list mob-address-list">
+                        <li class="mob-addrress-item">
+                            <a class="mob-address link mob-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                        <li class="mob-addrress-item">
+                            <a class="mob-address link mob-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                        </li>
+                    </ul>
+                </address>
+                <ul class="mob-icon-list">
+                    <li class="team-social-icon">
+                        <a href="" class="link-section-team">
+                            <svg class="team-social" width="16" height="16">
+                                <use href="./images/icons.svg#icon-instagram-2"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="team-social-icon">
+                        <a href="" class="link-section-team">
+                            <svg class="team-social" width="16" height="16">
+                                <use href="./images/icons.svg#icon-twitter-1"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="team-social-icon">
+                        <a href="" class="link-section-team">
+                            <svg class="team-social" width="16" height="16">
+                                <use href="./images/icons.svg#icon-facebook-1"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="team-social-icon">
+                        <a href="" class="link-section-team">
+                            <svg class="team-social" width="16" height="16">
+                                <use href="./images/icons.svg#icon-linkedin-1"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
     </header>
@@ -68,7 +137,7 @@
                                 </svg>
                             </div>
                         <h3 class="list-title">Strategy</h3>
-                        <p class="paragraph">Our goal is to identify the business
+                        <p class="paragraph-desc">Our goal is to identify the business
                         problem to walk away with the perfect and creative solution.</p>
                     </li>
                     <li class="desc-list-item">
@@ -78,7 +147,7 @@
                             </svg>
                         </div>
                         <h3 class="list-title">Punctuality</h3>
-                        <p class="paragraph">Bring the key message to the brand's audience for the best price within the shortest possible time.</p>
+                        <p class="paragraph-desc">Bring the key message to the brand's audience for the best price within the shortest possible time.</p>
                     </li>
                     <li class="desc-list-item">
                         <div class="desc-item-icon">
@@ -87,7 +156,7 @@
                             </svg>
                         </div>
                         <h3 class="list-title">Diligence </h3>
-                        <p class="paragraph">Research and confirm brands that present the strongest digital growth opportunities and minimize risk.</p>
+                        <p class="paragraph-desc">Research and confirm brands that present the strongest digital growth opportunities and minimize risk.</p>
                     </li>
                     <li class="desc-list-item">
                         <div class="desc-item-icon">
@@ -96,7 +165,7 @@
                             </svg>
                         </div>
                         <h3 class="list-title">Technologies</h3>
-                        <p class="paragraph">Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p>
+                        <p class="paragraph-desc">Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p>
                     </li>
                 </ul>
             </div>
@@ -107,13 +176,16 @@
                 <h2 class="title-doing">What are we doing</h2>
                 <ul class="list doing-img">
                     <li class="doing-item">
-                        <img src="./images/doing-1.jpg" alt="monitor" width="360" height="300" />
+                        <img srcset="./images/doing-1.jpg 1x, ./images/doing-1-2x.jpg 2x"
+                        src="./images/doing-1.jpg" alt="monitor" width="360" height="300" />
                     </li>
                     <li class="doing-item">
-                        <img src="./images/doing-2.jpg" alt="telephone" width="360" height="300" />
+                        <img srcset="./images/doing-2.jpg 1x, ./images/doing-2-2x.jpg 2x"
+                        src="./images/doing-2.jpg" alt="telephone" width="360" height="300" />
                     </li>
                     <li class="doing-item">
-                        <img src="./images/doing-3.jpg" alt="laptop" width="360" height="300" />
+                        <img srcset="./images/doing-3.jpg 1x, ./images/doing-3-2x.jpg 2x"
+                        src="./images/doing-3.jpg" alt="laptop" width="360" height="300" />
                     </li>
                 </ul>
             </div>
@@ -124,9 +196,10 @@
                 <h2 class="title-team">Our Team</h2>
                 <ul class="list list-team">
                     <li class="section-img">
-                        <img src="./images/team-1.jpg" alt="Mark Guerrero" width="264" height="260" />
+                        <img srcset="./images/team-1.jpg 1x, ./images/team-1-2x.jpg 2x"
+                        src="./images/team-1.jpg" alt="Mark Guerrero" width="264" height="260" />
                         <div class="img-desc">
-                            <h3 class="list-title">Mark Guerrero</h3>
+                            <h3 class="list-title-team">Mark Guerrero</h3>
                             <p class="paragraph">Product Designer</p>
                             <ul class="social-icon-flex">
                                 <li class="team-social-icon">
@@ -161,9 +234,10 @@
                         </div>
                     </li>
                     <li class="section-img">
-                        <img src="./images/team-2.jpg" alt="Tom Ford" width="264" height="260" />
+                        <img srcset="./images/team-2.jpg 1x, ./images/team-2-2x.jpg 2x"
+                        src="./images/team-2.jpg" alt="Tom Ford" width="264" height="260" />
                         <div class="img-desc">
-                            <h3 class="list-title">Tom Ford</h3>
+                            <h3 class="list-title-team">Tom Ford</h3>
                             <p class="paragraph">Frontend Developer</p>
                             <ul class="social-icon-flex">
                                 <li class="team-social-icon">
@@ -198,9 +272,10 @@
                         </div>
                     </li>
                     <li class="section-img">
-                        <img src="./images/team-3.jpg" alt="Camila Garcia" width="264" height="260" />
+                        <img srcset="./images/team-3.jpg 1x, ./images/team-3-2x.jpg 2x"
+                        src="./images/team-3.jpg" alt="Camila Garcia" width="264" height="260" />
                         <div class="img-desc">
-                            <h3 class="list-title">Camila Garcia</h3>
+                            <h3 class="list-title-team">Camila Garcia</h3>
                             <p class="paragraph">Marketing</p>
                             <ul class="social-icon-flex">
                                 <li class="team-social-icon">
@@ -235,9 +310,10 @@
                         </div>
                     </li>
                     <li class="section-img">
-                        <img src="./images/team-4.jpg" alt="Daniel Wilson" width="264" height="260" />
+                        <img srcset="./images/team-4.jpg 1x, ./images/team-4-2x.jpg 2x"
+                        src="./images/team-4.jpg" alt="Daniel Wilson" width="264" height="260" />
                         <div class="img-desc">
-                            <h3 class="list-title">Daniel Wilson</h3>
+                            <h3 class="list-title-team">Daniel Wilson</h3>
                             <p class="paragraph">UI Designer</p>
                             <ul class="social-icon-flex">
                                 <li class="team-social-icon">
@@ -468,6 +544,7 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 
 </body>
 </html>
