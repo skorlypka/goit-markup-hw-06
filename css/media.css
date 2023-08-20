@@ -7,10 +7,16 @@
 @media screen and (min-width: 768px) {
     .container {
         max-width: 766px;
+        padding: 0 16px;
+        margin: 0 auto;
     }
 
     .header-flex {
         display: flex;
+    }
+
+    .header-logo {
+        margin-right: 76px;
     }
 
     .header-address-list {
@@ -55,8 +61,14 @@
         margin-bottom: 36px;
     }
 
+    .desc-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+    }
+
     .desc-list-item {
-        flex-basis: calc((100% - 24px) / 3);
+        flex-basis: calc((100% - 24px) / 2);
     }
 
     .list-title {
@@ -75,6 +87,10 @@
 
     .section-img {
         margin-bottom: 0;
+    }
+
+    .customers-list {
+        gap: 72px 24px;
     }
 
     .customers-list-item {
@@ -100,9 +116,24 @@
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+    .customers-container {
+        max-width: 584px;
+    }
+
+    .team-container {
+        max-width: 584px;
+    }
+
+    .footer-container {
+        max-width: 584px;
+    }
+}
+
 @media screen and (min-width: 1158px) {
     .container {
         max-width: 1156px;
+        padding: 0 15px;
     }
 
     .section_title {

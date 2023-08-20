@@ -36,8 +36,6 @@ ul {
     padding: 0;
 }
 
-
-
 img {
     display: block;
 }
@@ -69,7 +67,6 @@ img {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-right: 249px;
     display: flex;
 }
 
@@ -90,6 +87,7 @@ img {
 .container-header-flex {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header-flex {
@@ -177,9 +175,16 @@ img {
     text-transform: capitalize;
 }
 
+.mob-list {
+    color: var(--navyblue, #2E2F42);
+}
+
+.mob-current {
+    color: var(--color-ocean);
+}
+
 .mob-menu-item:not(:last-child) {
     margin-bottom: 40px;
-    color: var(--color-ocean);
 }
 
 .mob-box {
@@ -188,6 +193,23 @@ img {
 
 .header-mob-address {
     margin-bottom: 48px;
+}
+
+.mob-tel {
+    color: var(--iris, #4D5AE5);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+.mob-mail {
+    color: var(--slate, #434455);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 }
 
 .mob-icon-list {
@@ -212,6 +234,8 @@ img {
 
 .list {
     list-style: none;
+    margin: 0;
+    padding-left: 0;
 }
 
 .span-logo {
@@ -389,6 +413,7 @@ img {
 
 .paragraph-desc {
     font-weight: 500;
+    margin: 0;
 }
 
 .title-doing {
@@ -396,7 +421,6 @@ img {
 }
 
 .section-doing {
-    /* padding-bottom: 96px; */
     display: none;
 }
 
@@ -420,9 +444,7 @@ h2 {
 }
 
 .list-team {
-    /* display: flex; */
     gap: 24px;
-    margin-left: 82px;
 }
 
 .list-title-team {
@@ -447,7 +469,6 @@ h2 {
 .section-team {
     background-color: var(--color-cloud);
     padding: 120px 0;
-    margin-bottom: 120px;
 }
 
 .section-img {
@@ -458,8 +479,8 @@ h2 {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
-    margin-bottom: 72px;
     max-width: 264px;
+    margin: 0 auto 72px;
 }
 
 .social-icon-flex {
@@ -587,12 +608,10 @@ h2 {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 120px;
     gap: 72px 16px;
 }
 
 .customers-list-item {
-    /* width: calc((100% - 120px) / 6); */
     width: calc((100% - 16px) / 2);
     height: 88px;
 }
@@ -757,8 +776,8 @@ footer {
 
 .container {
     width: 100%;
-    max-width: 1158px;
-    padding: 0 15px;
+    max-width: 420px;
+    padding: 0 16px;
     margin: 0 auto;
 }
 
@@ -777,7 +796,8 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    width: 408px;
+    width: calc(100% - 36px);
+    max-width: 408px;
     min-height: 584px;
     background-color: var(--color-dairy);
     border-radius: 4px;
