@@ -433,6 +433,10 @@ img {
     margin-bottom: 72px;
 }
 
+.paragraph-team {
+    margin-bottom: 8px;
+}
+
 h2 {
     color: var(--color-grey);
     font-size: 36px;
